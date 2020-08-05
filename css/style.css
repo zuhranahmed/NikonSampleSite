@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  width: 100%;
+}
+/* utilities */
+.bg-primary {
+  background: yellow;
+  color: #333;
+}
+.bg-secondary {
+  background-color: #333;
+  color: #fff;
+}
+.bg-secondary a {
+  color: #fff;
+}
+
+/* main header */
+.main-header {
+  height: 100vh;
+}
+
+.main-header .intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 40vh;
+}
+.main-header .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 60vh;
+}
+.intro div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 75px;
+  font-style: italic;
+}
+.content div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 75px;
+}
+.content div:last-child h1 {
+  margin: 20px 0;
+  font-style: italic;
+}
+.content div:first-child img {
+  height: 60vh;
+}
+
+/* section a */
+.section-a {
+  background: #eae6e6;
+  height: 1000px;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+}
+.container div:first-child {
+  padding: 30px 0;
+}
+.container div:first-child h1 {
+  font-style: italic;
+  font-size: 36px;
+}
+.container div:last-child img {
+  height: 800px;
+}
+
+/* footer */
+footer {
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+footer .bg-primary {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+footer .bg-primary h2,
+footer .bg-primary p {
+  font-style: italic;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social i {
+  padding-right: 20px;
+  cursor: pointer;
+}
+footer .social i:hover {
+  color: #ccc;
+}
+
+/* Media Queries */
+/* Mobile Phones */
+@media (max-width: 500px) {
+  .main-header {
+    height: 50vh;
+  }
+  .main-header .intro {
+    grid-template-columns: 1fr;
+  }
+  .main-header .content {
+    grid-template-columns: 1fr;
+  }
+  .main-header .content div img {
+    display: none;
+  }
+  .main-header .content div:last-child {
+    display: none;
+  }
+  .section-a {
+    padding: 50px 0;
+    height: 600px;
+  }
+  .container div:last-child img {
+    height: 400px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+  footer .social {
+    padding: 10px 0;
+    text-align: center;
+  }
+  footer .bg-primary {
+    padding: 10px 0;
+  }
+}
